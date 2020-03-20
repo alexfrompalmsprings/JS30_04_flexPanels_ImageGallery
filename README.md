@@ -1,1 +1,1 @@
-# JS30_04_flexPanels_ImageGallery
+# JS30 Challenge 04 flexPanels_ImageGallery
