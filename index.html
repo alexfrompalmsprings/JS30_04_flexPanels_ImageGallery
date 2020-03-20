@@ -128,16 +128,33 @@
     //need a function to toggle on/off
     function toggleOpen(){
 
-      console.log('running the toggle 👉')
+      console.log('running the toggleOpen 👉')
       this.classList.toggle('open');
 
     }
+
+    // pass an event to the toggleActive
+    function toggleActive(e){
+      console.log(e.propertyName);
+
+      // console.log('running the toggleActive 👉')
+      if(e.propertyName.includes('flex')){
+        this.classList.toggle('open-active');
+      }
+    }
+
 
 
     // pass it into each of the panels
     panels.forEach(
       //on click ->
       panel => panel.addEventListener('click', toggleOpen)
+    );
+
+    // pass it into each of the panels
+    panels.forEach(
+      //on click ->
+      panel => panel.addEventListener('transitionend', toggleActive)
     );
 
 
