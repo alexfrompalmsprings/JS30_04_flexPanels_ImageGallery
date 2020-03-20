@@ -124,7 +124,22 @@
   <script>
     //create the panels
     let panels = document.querySelectorAll('.panels');
-    console.log(panels);
+
+    //need a function to toggle on/off
+    function toggleOpen(){
+
+      console.log('running the toggle 👉')
+      this.classList.toggle('open');
+
+    }
+
+
+    // pass it into each of the panels
+    panels.forEach(
+      //on click ->
+      panel => panel.addEventListener('click', toggleOpen)
+    );
+
 
 
 
